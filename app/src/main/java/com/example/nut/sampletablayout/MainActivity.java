@@ -1,6 +1,7 @@
 package com.example.nut.sampletablayout;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,10 +12,13 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar)
+
+    @BindView(R.id.main_tool_bar_layout)
     Toolbar toolbar;
     @BindView(R.id.main_tab_layout)
     TabLayout mainTabLayout;
+    @BindView(R.id.main_app_bar_layout)
+    AppBarLayout mainAppBarLayout;
     @BindView(R.id.main_view_pager)
     ViewPager mainViewPager;
 
