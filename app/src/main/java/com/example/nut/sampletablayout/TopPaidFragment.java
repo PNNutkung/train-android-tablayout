@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class TopFreeFragment extends Fragment {
+public class TopPaidFragment extends Fragment {
 
     private Unbinder unbinder;
 
-    public static TopFreeFragment newInstance() {
-        TopFreeFragment fragment = new TopFreeFragment();
+    public static TopPaidFragment newInstance() {
+        TopPaidFragment fragment = new TopPaidFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -23,7 +23,7 @@ public class TopFreeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_top_free, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_top_paid, container, false);
         unbinder = ButterKnife.bind(this, rootView);
         return rootView;
     }

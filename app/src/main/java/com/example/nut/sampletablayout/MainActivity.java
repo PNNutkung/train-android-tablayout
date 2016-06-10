@@ -25,5 +25,13 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
+
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.addFragments(HomeFragment.newInstance(), "Home");
+        viewPagerAdapter.addFragments(TopFreeFragment.newInstance(), "Top Free");
+        viewPagerAdapter.addFragments(TopPaidFragment.newInstance(), "Top Paid");
+        mainViewPager.setAdapter(viewPagerAdapter);
+        mainViewPager.setOffscreenPageLimit(3);
+        mainTabLayout.setupWithViewPager(mainViewPager);
     }
 }
